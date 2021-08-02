@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список дел</title>
+</head>
+<body>
+<h1>Список дел</h1>
+<p>Количество дел в текущем списке : <span th:text="${taskCount}">0</span></p>
+<hr>
+<a href="/new">Добавить дело</a>
+<hr>
+<br/>
+<div th:each="task : ${tasks}">
+    <a th:href="@{/{id}(id=${task.getId()})}" class="task-link" th:attr="task-id=${task.id}" th:text="${task.dealName}">task</a>
+</div>
+</body>
+</html>

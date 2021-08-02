@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование дела</title>
+</head>
+<body>
+<form th:method="PATCH" th:action="@{/{id}(id=${task.getId()})}" th:object="${task}">
+    <label for="dealName">Введите новое дело: </label>
+    <input type="text" th:field="*{dealName}" id="dealName"/>
+    <br/>
+    <input type="submit" value="Изменить">
+</form>
+</body>
+</html>

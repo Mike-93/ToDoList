@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавить дело</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/}" th:object="${task}">
+    <label> Наименование:</label>
+    <input type="text" th:field="*{dealName}" id="name"/>
+    <br/>
+    <input type="submit" value="Добавить">
+</form>
+</body>
+</html>
